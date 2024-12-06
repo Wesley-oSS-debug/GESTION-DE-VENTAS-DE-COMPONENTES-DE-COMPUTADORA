@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+#agregando los que faltaban
+*.win
+*.layout
