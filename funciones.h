@@ -5,6 +5,7 @@
 
 void agregarCliente(Administrador&,TiendaComponentes&);
 void realizarVenta(Administrador&,TiendaComponentes&);
+void agregarProductos(Administrador&,TiendaComponentes&);
 void mostrarVenta(TiendaComponentes);
 
 #endif
