@@ -1,7 +1,10 @@
 #include <iostream>
+#include "Persona.h"
+using namespace std;
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
-int main(int argc, char** argv) {
+int main() {
+	//Prueba
+	Persona obj("oscar","6314442","986408779");
+	obj.mostrarPersona();
 	return 0;
 }
