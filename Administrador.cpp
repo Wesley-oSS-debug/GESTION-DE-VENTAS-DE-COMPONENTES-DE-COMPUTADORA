@@ -16,3 +16,7 @@ void Administrador::gestionarCliente(TiendaComponentes* tienda,Cliente* clien) {
 void Administrador::gestionarProducto(TiendaComponentes* tienda,Producto* prod) {
 	tienda->agregarProducto(prod);
 }
+
+void Administrador::gestionarCompra(TiendaComponentes* tienda,int _cantidad,string _fecha,string _dni,string nombreP) {
+	tienda->crearCompra(_cantidad,_fecha,nombreP,_dni);
+}

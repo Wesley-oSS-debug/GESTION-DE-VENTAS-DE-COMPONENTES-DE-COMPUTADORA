@@ -1,8 +1,14 @@
 #ifndef PRODUCTO_H
 #define PRODUCTO_H
+#include "Compra.h"
 #include <string>
+#include <vector>
+
 
 using namespace std;
+
+class Compra;
+
 
 class Producto{
 	private:
@@ -10,9 +16,13 @@ class Producto{
 		int stock;
 		string nombre;
 		float precio;
+		vector<Compra*> compras;
 	public:
 		Producto(int,string,float);
-		void mostrarProducto();	
+		float obtenerPrecio();
+		string obtenerNombreP();
+		void mostrarProducto();
+		void asignarCompras(Compra*);	
 };
 
 #endif
