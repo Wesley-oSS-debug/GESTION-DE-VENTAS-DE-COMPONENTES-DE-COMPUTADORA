@@ -1,8 +1,10 @@
 #ifndef ADMINISTRADOR_H
 #define ADMINISTRADOR_H
 #include <string>
-#include "Persona.h"
+#include "Cliente.h"
+#include "Producto.h"
 #include "TiendaComponentes.h"
+#include "Compra.h"
 
 
 using namespace std;
@@ -15,6 +17,7 @@ class Administrador:public Persona{
 		Administrador(string,string,string);
 		void gestionarCliente(TiendaComponentes*,Cliente*);
 		void gestionarProducto(TiendaComponentes*,Producto*);
+		void gestionarCompra(TiendaComponentes*,int,string,string,string);
 		void mostrarAdministrador();	
 };
 

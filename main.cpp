@@ -24,6 +24,7 @@ int main() {
 	admin.gestionarProducto(&tienda,&producto2);
 	admin.gestionarProducto(&tienda,&producto3);
 	
+	admin.gestionarCompra(&tienda,4,"07/12/2024","71112233","i5-12400");
 	tienda.mostrarDato();
 	
 	return 0;

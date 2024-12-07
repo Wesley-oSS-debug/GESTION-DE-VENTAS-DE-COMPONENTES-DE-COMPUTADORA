@@ -1,8 +1,13 @@
 #ifndef COMPRA_H
 #define COMPRA_H
 #include <string>
+#include "Cliente.h"
+#include "Producto.h"
 
 using namespace std;
+
+class Producto;
+class Cliente;
 
 class Compra{
 	private:
@@ -10,11 +15,16 @@ class Compra{
 		int cantidad;
 		float montoTotal;
 		string fecha;
+		Cliente *cliente;
+		Producto *producto;
 	public:
-		Compra(int,string);
+		Compra(Cliente*,Producto*,int,string);
 		void mostrarVenta();
 		string obtenerIDVenta();
-		string obtenerMontoTotal();	
+		string obtenerMontoTotal();
+		int obtenerCantidad();	
+		Cliente* obtenerCliente();
+		Producto* obtenerProducto();
 };
 
 #endif

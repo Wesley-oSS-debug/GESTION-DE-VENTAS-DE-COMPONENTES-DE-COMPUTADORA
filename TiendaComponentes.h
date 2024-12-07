@@ -3,6 +3,7 @@
 #include <vector>
 #include "Cliente.h"
 #include "Producto.h"
+#include "Compra.h"
 
 using namespace std;
 
@@ -14,7 +15,10 @@ class TiendaComponentes{
 		void agregarCliente(Cliente*);
 		void agregarProducto(Producto*);
 		void mostrarDato();
+		void crearCompra(int,string,string,string);
 		void mostrarProductos();
+		int buscarCliente(string);
+		int buscarProducto(string);
 };
 
 #endif

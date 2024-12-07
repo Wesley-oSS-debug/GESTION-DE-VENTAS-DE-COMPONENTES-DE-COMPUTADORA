@@ -1,6 +1,4 @@
 #include "TiendaComponentes.h"
-#include "Cliente.h"
-#include "Producto.h"
 #include <vector>
 #include <iostream>
 
@@ -16,7 +14,7 @@ void TiendaComponentes::agregarProducto(Producto* prod) {
 
 void TiendaComponentes::mostrarDato() {
 	for (int i=0;i<listaClientes.size();i++) {
-		listaClientes[i]-> mostrarDatos();
+		listaClientes[i] -> mostrarDatos();
 		cout<<endl;
 	}
 }
@@ -26,6 +24,37 @@ void TiendaComponentes::mostrarProductos() {
 		listaProducto[i] -> mostrarProducto();
 		cout<<endl;
 	}
+}
+
+int TiendaComponentes::buscarCliente(string _dni) {
+	for (int i=0;i<listaClientes.size();i++) {
+		if (listaClientes[i] -> obtenerDNI() == _dni) {
+			return i;
+		}
+	}
+	return -1;
+} 
+
+int TiendaComponentes::buscarProducto(string nombreP) {
+	for (int i=0;i<listaProducto.size();i++) {
+		if (listaProducto[i] -> obtenerNombreP() == nombreP) {
+			return i;
+		}
+	}
+	return -1;
+}
+
+void TiendaComponentes::crearCompra(int _cantidad,string _fecha, string nombreP,string _dni) {
+	Compra* compra;
+	Cliente* cliente;
+	int indP,indC;
+	indC=buscarCliente(_dni);
+	indP=buscarProducto(nombreP);
+	
+	cliente = listaClientes[indC];
+	compra = new Compra(cliente,listaProducto[indP],_cantidad,_fecha);
+	listaProducto[indP]-> asignarCompras(compra);
+	cliente->asignarCompras(compra);
 }
 
 

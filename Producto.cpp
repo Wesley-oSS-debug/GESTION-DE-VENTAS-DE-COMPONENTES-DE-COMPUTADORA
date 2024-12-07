@@ -13,3 +13,17 @@ void Producto::mostrarProducto() {
 		<<"Nombre del producto: "<<nombre<<endl
 		<<"Precio del producto: "<<precio<<endl;
 }
+
+float Producto::obtenerPrecio() {
+	return precio;
+}
+
+void Producto::asignarCompras(Compra* com) {
+	compras.push_back(com);
+	stock-=com->obtenerCantidad();
+	
+}
+
+string Producto::obtenerNombreP() {
+	return nombre;
+}
