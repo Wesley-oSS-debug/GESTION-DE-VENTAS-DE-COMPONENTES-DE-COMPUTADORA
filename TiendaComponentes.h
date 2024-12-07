@@ -12,7 +12,9 @@ class TiendaComponentes{
 		vector<Producto*> listaProducto; //variable de agregacion
 	public:
 		void agregarCliente(Cliente*);
+		void agregarProducto(Producto*);
 		void mostrarDato();
+		void mostrarProductos();
 };
 
 #endif
