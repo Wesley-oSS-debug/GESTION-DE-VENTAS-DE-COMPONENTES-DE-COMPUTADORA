@@ -4,17 +4,12 @@
 #include "Producto.h"
 #include "Administrador.h"
 #include "TiendaComponentes.h"
+#include "funciones.h"
 using namespace std;
 
 int main() {
-	//Prueba
 	TiendaComponentes tienda;
 	Administrador admin("Oscar","63147610","934323253");
-	//CLIENTES
-	//Cliente cliente1("wesley","75353535","922424524");
-	Cliente cliente2("yair","71112233","9423423241");
-	//admin.gestionarCliente(&tienda,&cliente1);
-	admin.gestionarCliente(&tienda,&cliente2);
 	
 	//PRODUCTOS
 	Producto producto1(20,"rtx2060",650);
@@ -24,8 +19,29 @@ int main() {
 	admin.gestionarProducto(&tienda,&producto2);
 	admin.gestionarProducto(&tienda,&producto3);
 	
-	admin.gestionarCompra(&tienda,4,"07/12/2024","71112233","i5-12400");
-	tienda.mostrarDato();
+	int op;
+	do {
+		cout<<"1. Agregar cliente"<<endl
+			<<"2. Agregar productos"<<endl
+			<<"3. Realizar venta"<<endl
+			<<"4. Mostrar datos de venta"<<endl
+			<<"Ingrese una opcion: "; cin>>op;
+		switch (op) {
+			case 1:
+				agregarCliente(admin,tienda);
+				tienda.mostrarNombreCliente();
+				break;
+			case 2:
+				//agregarProductos()
+				break;
+			case 3:
+				realizarVenta(admin,tienda);
+				break;
+			case 4:
+				mostrarVenta(tienda);
+				break;
+		}
+	} while(op!=0);
 	
 	return 0;
 }

@@ -15,6 +15,7 @@ class TiendaComponentes{
 		void agregarCliente(Cliente*);
 		void agregarProducto(Producto*);
 		void mostrarDato();
+		void mostrarNombreCliente();
 		void crearCompra(int,string,string,string);
 		void mostrarProductos();
 		int buscarCliente(string);

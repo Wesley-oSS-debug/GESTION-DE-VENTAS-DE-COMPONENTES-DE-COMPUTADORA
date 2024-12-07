@@ -15,3 +15,7 @@ void Persona::mostrarPersona() {
 string Persona::obtenerDNI() {
 	return dni;
 }
+
+string Persona::obtenerNombre() {
+	return nombre;
+}

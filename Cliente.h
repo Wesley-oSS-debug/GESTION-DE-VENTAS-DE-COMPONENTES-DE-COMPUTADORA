@@ -3,8 +3,11 @@
 #include <string>
 #include "Persona.h"
 #include "Compra.h"
+#include <vector>
 
 using namespace std;
+
+class Compra;
 
 class Cliente:public Persona{
 	private:

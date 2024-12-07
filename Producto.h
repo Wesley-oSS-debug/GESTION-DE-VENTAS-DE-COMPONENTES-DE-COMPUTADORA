@@ -1,6 +1,6 @@
 #ifndef PRODUCTO_H
 #define PRODUCTO_H
-
+#include "Compra.h"
 #include <string>
 #include <vector>
 
