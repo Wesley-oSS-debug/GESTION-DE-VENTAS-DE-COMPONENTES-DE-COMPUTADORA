@@ -8,6 +8,7 @@ Producto::Producto(int _stock,string _nombre,float _precio) {
 }
 
 void Producto::mostrarProducto() {
+	cout<<endl;
 	cout<<"ID del producto: "<<id<<endl
 		<<"Stock del producto: "<<stock<<endl
 		<<"Nombre del producto: "<<nombre<<endl
