@@ -13,6 +13,7 @@ class Compra;
 class Producto{
 	private:
 		int id;
+		static int contadorID;
 		int stock;
 		string nombre;
 		float precio;
@@ -20,6 +21,7 @@ class Producto{
 	public:
 		Producto(int,string,float);
 		int obtenerID();
+		void aumentarID();
 		int obtenerStock();
 		string obtenerNombreP();
 		float obtenerPrecio();

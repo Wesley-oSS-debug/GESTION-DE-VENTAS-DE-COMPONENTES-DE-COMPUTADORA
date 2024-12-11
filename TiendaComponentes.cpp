@@ -6,10 +6,12 @@ using namespace std;
 
 void TiendaComponentes::agregarCliente(Cliente* clien) {
 	listaClientes.push_back(clien);
+	clien->aumentarID();
 }
 
 void TiendaComponentes::agregarProducto(Producto* prod) {
 	listaProducto.push_back(prod); //asignacion de referencia
+	prod->aumentarID(); 
 }
 
 void TiendaComponentes::mostrarDato() {
@@ -22,6 +24,7 @@ void TiendaComponentes::mostrarDato() {
 void TiendaComponentes::mostrarNombreCliente() {
 	for (int i=0;i<listaClientes.size();i++) {
 		cout<<listaClientes[i]->obtenerNombre()<<endl;
+		cout<<listaClientes[i]->obtenerID()<<endl;
 		cout<<endl;
 	}
 }
@@ -62,6 +65,7 @@ void TiendaComponentes::crearCompra(int _cantidad,string _fecha, string nombreP,
 	compra = new Compra(cliente,listaProducto[indP],_cantidad,_fecha);
 	listaProducto[indP]-> asignarCompras(compra,true);
 	cliente->asignarCompras(compra);
+	compra->aumentarID();
 }
 
 vector<Cliente*> TiendaComponentes::obtenerClientes() {

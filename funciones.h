@@ -2,13 +2,13 @@
 #define FUNCIONES_H
 #include "Administrador.h"
 #include "TiendaComponentes.h"
-#include "gestionDatos.h"
 #include "Producto.h"
 
-void agregarCliente(Administrador&,TiendaComponentes&,gestionDatos);
-void realizarVenta(Administrador&,TiendaComponentes&,gestionDatos);
-void agregarProductos(Administrador&,TiendaComponentes&,gestionDatos);
+void agregarCliente(Administrador&,TiendaComponentes&);
+void realizarVenta(Administrador&,TiendaComponentes&);
+void agregarProductos(Administrador&,TiendaComponentes&);
 void mostrarVenta(TiendaComponentes);
 void mostrarProducto(TiendaComponentes);
+void mostrarCliente(TiendaComponentes);
 
 #endif

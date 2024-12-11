@@ -5,6 +5,7 @@
 #include "Administrador.h"
 #include "TiendaComponentes.h"
 #include "funciones.h"
+#include "gestionDatos.h"
 using namespace std;
 
 int main() {
@@ -24,23 +25,29 @@ int main() {
 			<<"3. Realizar venta"<<endl
 			<<"4. Mostrar datos de venta"<<endl
 			<<"5. Mostrar Productos"<<endl
+			<<"6. Mostrar Clientes"<<endl
+			<<"0. Cerrar programa"<<endl
 			<<"Ingrese una opcion: "; cin>>op;
 		switch (op) {
 			case 1:
-				agregarCliente(admin,tienda,gestion);
+				agregarCliente(admin,tienda);
 				tienda.mostrarNombreCliente();
 				break;
 			case 2:
-				agregarProductos(admin,tienda,gestion);
+				agregarProductos(admin,tienda);
 				break;
 			case 3:
-				realizarVenta(admin,tienda,gestion);
+				realizarVenta(admin,tienda);
 				break;
 			case 4:
 				mostrarVenta(tienda);
 				break;
 			case 5:
 				mostrarProducto(tienda);
+				break;
+			case 6:
+				mostrarCliente(tienda);
+				break;
 		}
 	} while(op!=0);
 	
