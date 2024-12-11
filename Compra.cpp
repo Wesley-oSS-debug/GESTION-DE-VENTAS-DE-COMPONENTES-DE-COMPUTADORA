@@ -10,6 +10,8 @@ Compra::Compra(Cliente *_cliente,Producto *_producto,int _cantidad,string _fecha
 	producto=_producto;
 }
 
+int Compra::contadorID=0;
+
 Cliente* Compra::obtenerCliente() {
 	return cliente;
 }
@@ -26,28 +28,33 @@ string Compra::obtenerFecha() {
 	return fecha;
 }
 
+void Compra::aumentarID() {
+	contadorID++;
+	idVenta=contadorID;
+}
+
 int Compra::obtenerIDVenta() {
 	return idVenta;
 }
+void Compra::asignarIDVenta(int _idVenta) {
+	idVenta=_idVenta;
+}
+
 
 float Compra::obtenerMontoTotal() {
 	return montoTotal;
 }
 
-void Compra::asignarIDVenta(int _idVenta) {
-	idVenta=_idVenta;
-}
 
 void Compra::asignarMontoTotal(float _montoTotal) {
 	montoTotal=_montoTotal;
 }
 
 void Compra::mostrarVenta() {
-	cout<<endl;
-	producto->mostrarProducto();
-	cout<<endl;
 	cout<<"ID de venta: "<<idVenta<<endl
 		<<"Cantidad: "<<cantidad<<endl
 		<<"Monto total a pagar: "<<montoTotal<<endl
 		<<"Fecha de venta: "<<fecha<<endl;
+	cout<<endl;
+	producto->mostrarProducto();
 }

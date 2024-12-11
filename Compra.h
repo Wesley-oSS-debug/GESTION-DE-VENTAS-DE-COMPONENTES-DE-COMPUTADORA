@@ -12,6 +12,7 @@ class Cliente;
 class Compra{
 	private:
 		int idVenta;
+		static int contadorID;
 		int cantidad;
 		float montoTotal;
 		string fecha;
@@ -21,6 +22,7 @@ class Compra{
 		Compra(Cliente*,Producto*,int,string);
 		void mostrarVenta();
 		int obtenerIDVenta();
+		void aumentarID();
 		float obtenerMontoTotal();
 		string obtenerFecha();
 		int obtenerCantidad();	
