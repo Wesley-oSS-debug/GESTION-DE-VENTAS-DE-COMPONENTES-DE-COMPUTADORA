@@ -19,10 +19,13 @@ class Producto{
 		vector<Compra*> compras;
 	public:
 		Producto(int,string,float);
-		float obtenerPrecio();
+		int obtenerID();
+		int obtenerStock();
 		string obtenerNombreP();
+		float obtenerPrecio();
 		void mostrarProducto();
-		void asignarCompras(Compra*);	
+		void asignarID(int);
+		void asignarCompras(Compra*,bool);	
 };
 
 #endif

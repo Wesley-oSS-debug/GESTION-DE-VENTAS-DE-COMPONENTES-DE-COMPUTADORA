@@ -30,6 +30,18 @@ void realizarVenta(Administrador& admin,TiendaComponentes& tienda) {
 	admin.gestionarCompra(&tienda,cantidad,fecha,dni,nombre);
 }
 
+void agregarProductos(Administrador& admin,TiendaComponentes& tienda) {
+	int stock;
+	string nombre;
+	float precio;
+	cout<<"Ingrese nombre producto: "; cin>>nombre;
+	cout<<"Ingrese la cantidad a agregar: "; cin>>stock;
+	cout<<"Ingrese el precio del producto: "; cin>>precio;
+	cout<<"Agregado Correctamente"<<endl;
+	Producto* nuevoProducto=new Producto(stock,nombre,precio);
+	admin.gestionarProducto(&tienda,nuevoProducto);
+	
+}
 void mostrarVenta(TiendaComponentes tienda) {
 	tienda.mostrarDato();
 }

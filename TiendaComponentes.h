@@ -20,6 +20,8 @@ class TiendaComponentes{
 		void mostrarProductos();
 		int buscarCliente(string);
 		int buscarProducto(string);
+		vector<Cliente*> obtenerClientes();
+		vector<Producto*> obtenerProductos();
 };
 
 #endif

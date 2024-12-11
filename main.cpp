@@ -32,7 +32,7 @@ int main() {
 				tienda.mostrarNombreCliente();
 				break;
 			case 2:
-				//agregarProductos()
+				agregarProductos(admin,tienda);
 				break;
 			case 3:
 				realizarVenta(admin,tienda);

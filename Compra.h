@@ -20,11 +20,14 @@ class Compra{
 	public:
 		Compra(Cliente*,Producto*,int,string);
 		void mostrarVenta();
-		string obtenerIDVenta();
-		string obtenerMontoTotal();
+		int obtenerIDVenta();
+		float obtenerMontoTotal();
+		string obtenerFecha();
 		int obtenerCantidad();	
 		Cliente* obtenerCliente();
 		Producto* obtenerProducto();
+		void asignarMontoTotal(float);
+		void asignarIDVenta(int);
 };
 
 #endif

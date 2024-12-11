@@ -17,3 +17,15 @@ void Cliente::mostrarDatos() {
 		cout<<endl;
 	}
 }
+
+void Cliente::asignarIDCliente(int _id) {
+	idCliente=_id;
+}
+
+int Cliente::obtenerID() {
+	return idCliente;
+}
+
+vector<Compra*> Cliente::obtenerCompras() {
+	return compras;
+}
