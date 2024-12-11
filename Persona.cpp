@@ -19,3 +19,7 @@ string Persona::obtenerDNI() {
 string Persona::obtenerNombre() {
 	return nombre;
 }
+
+string Persona::obtenerTelefono() {
+	return telefono;
+}

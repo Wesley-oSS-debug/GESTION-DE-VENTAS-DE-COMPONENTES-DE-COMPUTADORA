@@ -60,8 +60,15 @@ void TiendaComponentes::crearCompra(int _cantidad,string _fecha, string nombreP,
 	
 	cliente = listaClientes[indC];
 	compra = new Compra(cliente,listaProducto[indP],_cantidad,_fecha);
-	listaProducto[indP]-> asignarCompras(compra);
+	listaProducto[indP]-> asignarCompras(compra,true);
 	cliente->asignarCompras(compra);
 }
 
+vector<Cliente*> TiendaComponentes::obtenerClientes() {
+	return listaClientes;
+}
+
+vector<Producto*> TiendaComponentes::obtenerProductos() {
+	return listaProducto;
+}
 

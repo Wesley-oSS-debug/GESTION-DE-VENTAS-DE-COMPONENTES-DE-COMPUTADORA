@@ -16,7 +16,10 @@ class Cliente:public Persona{
 	public:
 		Cliente(string,string,string);
 		void mostrarDatos();
-		void asignarCompras(Compra*);	
+		void asignarCompras(Compra*);
+		void asignarIDCliente(int);
+		int obtenerID();
+		vector<Compra*> obtenerCompras();	
 };
 
 #endif

@@ -18,12 +18,27 @@ float Producto::obtenerPrecio() {
 	return precio;
 }
 
-void Producto::asignarCompras(Compra* com) {
-	compras.push_back(com);
-	stock-=com->obtenerCantidad();
-	
+int Producto::obtenerID() {
+	return id;
 }
+
+int Producto::obtenerStock() {
+	return stock;
+}
+void Producto::asignarCompras(Compra* com, bool cen) {
+	if (cen==true) { //si cen es true entonces disminuye stock al asignar una compra
+		compras.push_back(com);
+		stock-=com->obtenerCantidad();
+	} else { // si no solo carga los datos de compras
+		compras.push_back(com);
+	}
+} 
 
 string Producto::obtenerNombreP() {
 	return nombre;
 }
+
+void Producto::asignarID(int _id) {
+	id=_id;
+}
+

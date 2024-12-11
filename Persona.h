@@ -13,7 +13,8 @@ class Persona{
 		Persona(string,string,string);
 		void mostrarPersona();
 		string obtenerNombre();
-		string obtenerDNI();	
+		string obtenerDNI();
+		string obtenerTelefono();	
 };
 
 #endif

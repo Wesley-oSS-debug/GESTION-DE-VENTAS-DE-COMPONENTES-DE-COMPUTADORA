@@ -1,5 +1,5 @@
 #ifndef FUNCIONES_H
-#define FUNCIONE_H
+#define FUNCIONES_H
 #include "Administrador.h"
 #include "TiendaComponentes.h"
 
