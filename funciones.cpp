@@ -5,10 +5,12 @@
 #include "Producto.h"
 #include "Administrador.h"
 #include "TiendaComponentes.h"
+#include "gestionDatos.h"
 
 using namespace std;
 
-void agregarCliente(Administrador& admin,TiendaComponentes& tienda) {
+void agregarCliente(Administrador& admin,TiendaComponentes& tienda, gestionDatos gestion) {
+
 	string nombre,dni,numero;
 	cout<<"Ingrese nombre: "; cin>>nombre;
 	cout<<"Ingrese dni: "; cin>>dni;
@@ -16,9 +18,11 @@ void agregarCliente(Administrador& admin,TiendaComponentes& tienda) {
 	cout<<"Agregado Correctamente"<<endl;
 	Cliente* nuevoCliente= new Cliente(nombre,dni,numero);
 	admin.gestionarCliente(&tienda,nuevoCliente);
+	gestion.guardarClientes(&tienda);
+
 }
 
-void realizarVenta(Administrador& admin,TiendaComponentes& tienda) {
+void realizarVenta(Administrador& admin,TiendaComponentes& tienda, gestionDatos gestion) {
 	int cantidad;
 	string nombre,dni,fecha;
 	tienda.mostrarProductos();
@@ -28,9 +32,10 @@ void realizarVenta(Administrador& admin,TiendaComponentes& tienda) {
 	cout<<"Ingrese la fecha de compra: "; cin>>fecha;
 	cout<<"Agregado Correctamente"<<endl;
 	admin.gestionarCompra(&tienda,cantidad,fecha,dni,nombre);
+	gestion.guardarCompras(&tienda);
 }
 
-void agregarProductos(Administrador& admin,TiendaComponentes& tienda) {
+void agregarProductos(Administrador& admin,TiendaComponentes& tienda, gestionDatos gestion) {
 	int stock;
 	string nombre;
 	float precio;
@@ -40,8 +45,14 @@ void agregarProductos(Administrador& admin,TiendaComponentes& tienda) {
 	cout<<"Agregado Correctamente"<<endl;
 	Producto* nuevoProducto=new Producto(stock,nombre,precio);
 	admin.gestionarProducto(&tienda,nuevoProducto);
+	gestion.guardarProductos(&tienda);
 	
 }
 void mostrarVenta(TiendaComponentes tienda) {
 	tienda.mostrarDato();
 }
+
+void mostrarProducto(TiendaComponentes tienda) {
+	tienda.mostrarProductos();
+}
+

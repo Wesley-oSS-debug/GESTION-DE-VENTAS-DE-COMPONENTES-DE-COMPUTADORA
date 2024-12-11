@@ -10,38 +10,40 @@ using namespace std;
 int main() {
 	TiendaComponentes tienda;
 	Administrador admin("Oscar","63147610","934323253");
-	
+	gestionDatos gestion;
+	gestion.cargarClientes(&tienda);
+	gestion.cargarProductos(&tienda);
+	gestion.cargarCompras(&tienda);
+
 	//PRODUCTOS
-	Producto producto1(20,"rtx2060",650);
-	Producto producto2(10,"i5-12400",550.5);
-	Producto producto3(5,"ram32gb",440);
-	admin.gestionarProducto(&tienda,&producto1);
-	admin.gestionarProducto(&tienda,&producto2);
-	admin.gestionarProducto(&tienda,&producto3);
-	
 	int op;
 	do {
+
 		cout<<"1. Agregar cliente"<<endl
 			<<"2. Agregar productos"<<endl
 			<<"3. Realizar venta"<<endl
 			<<"4. Mostrar datos de venta"<<endl
+			<<"5. Mostrar Productos"<<endl
 			<<"Ingrese una opcion: "; cin>>op;
 		switch (op) {
 			case 1:
-				agregarCliente(admin,tienda);
+				agregarCliente(admin,tienda,gestion);
 				tienda.mostrarNombreCliente();
 				break;
 			case 2:
-				agregarProductos(admin,tienda);
+				agregarProductos(admin,tienda,gestion);
 				break;
 			case 3:
-				realizarVenta(admin,tienda);
+				realizarVenta(admin,tienda,gestion);
 				break;
 			case 4:
 				mostrarVenta(tienda);
 				break;
+			case 5:
+				mostrarProducto(tienda);
 		}
 	} while(op!=0);
 	
+	gestion.actualizarDatos(&tienda);
 	return 0;
 }
