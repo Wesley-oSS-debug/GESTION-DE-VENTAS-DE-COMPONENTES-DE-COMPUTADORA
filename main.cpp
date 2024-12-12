@@ -104,9 +104,9 @@ int main() {
 			case 8:
 				modificarProducto(admin,tienda);
 				break;
-      		case 9:
-       			 mostrarMaxVent(tienda);
-        		break;
+	        case 9:
+		        mostrarMaxVent(tienda);
+		        break;
 			case 10:
 				mostrarClienAlf(tienda);
 				break;

@@ -69,8 +69,9 @@ int TiendaComponentes::buscarVenta(int _id) {
 
 void TiendaComponentes::mostrarMaxVenta() {
 	vector<Compra*> ventas;
+	
 	float max=0;
-	Compra* ventaMax;
+	Compra* ventaMax=NULL;
 	for (int i=0;i<listaClientes.size();i++) {
 		ventas=listaClientes[i]->obtenerCompras();
 			for (int j=0;j<ventas.size();j++) {
@@ -80,7 +81,12 @@ void TiendaComponentes::mostrarMaxVenta() {
 				}
 		}
 	}
-	ventaMax->mostrarVenta();
+	if (ventaMax==NULL) {
+		cout<<"No hay ventas"<<endl;
+		return;
+	} else {
+		ventaMax->mostrarVenta();
+	}
 }
 
 void TiendaComponentes::modificarCliente(string _dni,string _nombre,string _nuevoDni,string _telefono) {
