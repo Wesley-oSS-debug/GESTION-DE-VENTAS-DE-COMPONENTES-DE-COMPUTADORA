@@ -6,7 +6,7 @@
 #include "Administrador.h"
 #include "TiendaComponentes.h"
 #include "gestionDatos.h"
-
+//creditos para Yair-thedevs por las validaciones de dni y teléfono
 using namespace std;
 
 void agregarCliente(Administrador& admin,TiendaComponentes& tienda) {
@@ -15,12 +15,28 @@ void agregarCliente(Administrador& admin,TiendaComponentes& tienda) {
 	string nombre,dni,numero;
 	cout<<"\n\n-------------AGREGAR DATOS DEL CLIENTE-------------\n\n";
 	cout<<"Ingrese nombre: "; cin>>nombre;
-	cout<<"Ingrese dni: "; cin>>dni;
-	cout<<"Ingrese telefono: "; cin>>numero;
+	//validacion de la cantidad de dijitos de un numero de dni
+	do {	
+		cout<<"Ingrese dni(8 díjitos): "; cin>>dni;
+		if(dni.length()!=8){
+			cout<<"¡ERROR!\n";
+		}
+		
+	} while(dni.length()!=8); // el bucle termina cuando la cantidad sea 8
+
+//validacion de la cantidad de dijitos de un numero telefónico
+	do {	
+		cout<<"Ingrese teléfono(9 díjitos): "; cin>>numero;
+		if(numero.length()!=9){
+			cout<<"¡ERROR!\n";
+		}
+		
+	} while(numero.length()!=9); // el bucle termina cuando la cantidad sea 9
+	
 	cout<<"Agregado Correctamente"<<endl;
 	Cliente* nuevoCliente= new Cliente(nombre,dni,numero);
-	admin.gestionarCliente(&tienda,nuevoCliente);
 	system("pause");
+	admin.gestionarCliente(&tienda,nuevoCliente);
 }
 
 void realizarVenta(Administrador& admin,TiendaComponentes& tienda) {
