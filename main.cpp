@@ -51,6 +51,9 @@ int main() {
 	//PRODUCTOS
 	int op;
 	do {
+		system("cls");
+			setConsoleColor(11);
+		cout<<"\n\n----------MENÚ PRINCIPAL---------\n\n";
 		cout<<"1. Agregar cliente"<<endl
 			<<"2. Agregar productos"<<endl
 			<<"3. Realizar venta"<<endl
@@ -61,8 +64,18 @@ int main() {
 			<<"8. Modificar Producto"<<endl
 			<<"9. Mostrar Maxima venta"<<endl
 			<<"10. Ordenar clientes por orden alfabetico"<<endl
-			<<"0. Cerrar programa"<<endl
-			<<"Ingrese una opcion: "; cin>>op;
+			<<"0.  GUARDAR Y SALIR"<<endl;
+		while (true) {
+        cout << "\nSelecione una opción: "; cin >> op;
+        if (cin.fail()) {
+            cin.clear(); // Limpiar el estado de error de std::cin
+            cin.ignore(10000, '\n'); // Descartar la entrada inválida
+            cout << "\nEntrada no válida. Por favor, ingrese un número.\n";
+            cout<<"\n";
+        } else {
+            break;
+        }
+    }
 		switch (op) {
 			case 1:
 				setConsoleColor(12); // rojo
@@ -102,5 +115,6 @@ int main() {
 	} while(op!=0);
 	
 	gestion.actualizarDatos(&tienda);
+	//system("pause");
 	return 0;
 }
