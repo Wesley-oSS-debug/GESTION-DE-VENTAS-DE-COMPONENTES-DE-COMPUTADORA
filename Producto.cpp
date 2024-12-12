@@ -35,11 +35,10 @@ int Producto::obtenerStock() {
 }
 void Producto::asignarCompras(Compra* com, bool cen) {
 	if (cen==true) { //si cen es true entonces disminuye stock al asignar una compra
-		compras.push_back(com);
 		stock-=com->obtenerCantidad();
-	} else { // si no solo carga los datos de compras
-		compras.push_back(com);
 	}
+	// si no solo carga los datos de compras
+	
 } 
 
 string Producto::obtenerNombreP() {

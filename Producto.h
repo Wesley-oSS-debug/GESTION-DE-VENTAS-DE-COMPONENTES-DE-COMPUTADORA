@@ -16,7 +16,6 @@ class Producto{
 		int stock;
 		string nombre;
 		float precio;
-		vector<Compra*> compras;
 	public:
 		Producto(int,string,float);
 		int obtenerID();
