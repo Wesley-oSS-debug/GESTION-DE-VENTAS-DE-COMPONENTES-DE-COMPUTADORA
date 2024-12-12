@@ -32,7 +32,3 @@ void Administrador::editarProducto(TiendaComponentes* tienda,string _nombre,int 
 void Administrador::eliminarCliente(TiendaComponentes* tienda,string _dni) {
 	tienda->eliminarCliente(_dni);
 }
-
-void Administrador::eliminarProducto(TiendaComponentes* tienda,string _nombre) {
-	tienda->eliminarProducto(_nombre);
-}

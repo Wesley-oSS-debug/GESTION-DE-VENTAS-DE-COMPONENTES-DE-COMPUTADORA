@@ -87,10 +87,8 @@ void eliminarCliente(Administrador& admin,TiendaComponentes& tienda) {
 	admin.eliminarCliente(&tienda,dni);
 }
 
-void eliminarProd(Administrador& admin,TiendaComponentes& tienda) {
-	string _nombre;
-	cout<<"Ingrese el nombre del producto a eliminar: "; cin>>_nombre;
-	cout<<"Eliminado"<<endl;
-	admin.eliminarProducto(&tienda,_nombre);
+void mostrarClienAlf(TiendaComponentes tienda) {
+	tienda.ordenarClienAlf();
+	tienda.mostrarNombreCliente();
 }
 

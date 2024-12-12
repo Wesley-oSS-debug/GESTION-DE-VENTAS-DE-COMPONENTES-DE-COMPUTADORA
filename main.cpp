@@ -29,7 +29,7 @@ int main() {
 			<<"7. Modificar Cliente"<<endl
 			<<"8. Modificar Producto"<<endl
 			<<"9. Eliminar Cliente"<<endl
-			<<"10. Eliminar Producto"<<endl
+			<<"10. Ordenar clientes por orden alfabetico"<<endl
 			<<"0. Cerrar programa"<<endl
 			<<"Ingrese una opcion: "; cin>>op;
 		switch (op) {
@@ -61,7 +61,7 @@ int main() {
 				eliminarCliente(admin,tienda);
 				break;
 			case 10:
-				eliminarProd(admin,tienda);
+				mostrarClienAlf(tienda);
 				break;
 		}
 	} while(op!=0);
