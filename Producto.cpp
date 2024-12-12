@@ -50,3 +50,15 @@ void Producto::asignarID(int _id) {
 	id=_id;
 }
 
+void Producto::asignarNombre(string _nombre) {
+	nombre=_nombre;
+}
+
+void Producto::asignarPrecio(float _precio) {
+	precio=_precio;
+}
+
+void Producto::asignarStock(int _stock) {
+	stock=_stock;
+}
+

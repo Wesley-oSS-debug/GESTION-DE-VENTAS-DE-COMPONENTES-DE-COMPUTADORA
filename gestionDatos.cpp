@@ -117,7 +117,6 @@ void gestionDatos::cargarCompras(TiendaComponentes* tienda) {
 }
 
 void gestionDatos::actualizarDatos(TiendaComponentes* tienda) {
-	
 	remove("productos.txt");
 	remove("clientes.txt");
 	remove("ventas.txt");

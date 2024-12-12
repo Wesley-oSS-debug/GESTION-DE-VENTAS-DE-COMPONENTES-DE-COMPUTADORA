@@ -20,3 +20,11 @@ void Administrador::gestionarProducto(TiendaComponentes* tienda,Producto* prod) 
 void Administrador::gestionarCompra(TiendaComponentes* tienda,int _cantidad,string _fecha,string _dni,string nombreP) {
 	tienda->crearCompra(_cantidad,_fecha,nombreP,_dni);
 }
+
+void Administrador::editarCliente(TiendaComponentes* tienda,string _dni,string _nombre,string _nuevoDni,string _telefono) {
+	tienda->modificarCliente(_dni,_nombre,_nuevoDni,_telefono);
+}
+
+void Administrador::editarProducto(TiendaComponentes* tienda,string _nombre,int _stock,string nuevoNombre,float _precio) {
+	tienda->modificarProducto(_nombre,nuevoNombre,_precio,_stock);
+}

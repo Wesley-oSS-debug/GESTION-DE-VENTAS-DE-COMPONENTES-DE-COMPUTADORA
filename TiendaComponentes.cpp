@@ -54,6 +54,23 @@ int TiendaComponentes::buscarProducto(string nombreP) {
 	return -1;
 }
 
+void TiendaComponentes::modificarCliente(string _dni,string _nombre,string _nuevoDni,string _telefono) {
+	Cliente* cliente;
+	int indC=buscarCliente(_dni);
+	listaClientes[indC]->asignarNombre(_nombre);
+	listaClientes[indC]->asignarDNI(_nuevoDni);
+	listaClientes[indC]->asignarTelefono(_telefono);
+	
+}
+
+void TiendaComponentes::modificarProducto(string _nombre,string nuevoNombre,float _precio,int _stock) {
+	Producto* producto;
+	int indP=buscarProducto(_nombre);
+	listaProducto[indP]->asignarNombre(nuevoNombre);
+	listaProducto[indP]->asignarPrecio(_precio);
+	listaProducto[indP]->asignarStock(_stock);
+}
+
 void TiendaComponentes::crearCompra(int _cantidad,string _fecha, string nombreP,string _dni) {
 	Compra* compra;
 	Cliente* cliente;

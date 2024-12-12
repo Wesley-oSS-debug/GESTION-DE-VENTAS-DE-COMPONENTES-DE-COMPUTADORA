@@ -27,6 +27,9 @@ class Producto{
 		float obtenerPrecio();
 		void mostrarProducto();
 		void asignarID(int);
+		void asignarNombre(string);
+		void asignarStock(int);
+		void asignarPrecio(float);
 		void asignarCompras(Compra*,bool);	
 };
 

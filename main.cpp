@@ -19,19 +19,19 @@ int main() {
 	//PRODUCTOS
 	int op;
 	do {
-
 		cout<<"1. Agregar cliente"<<endl
 			<<"2. Agregar productos"<<endl
 			<<"3. Realizar venta"<<endl
 			<<"4. Mostrar datos de venta"<<endl
 			<<"5. Mostrar Productos"<<endl
 			<<"6. Mostrar Clientes"<<endl
+			<<"7. Modificar Cliente"<<endl
+			<<"8. Modificar Producto"<<endl
 			<<"0. Cerrar programa"<<endl
 			<<"Ingrese una opcion: "; cin>>op;
 		switch (op) {
 			case 1:
 				agregarCliente(admin,tienda);
-				tienda.mostrarNombreCliente();
 				break;
 			case 2:
 				agregarProductos(admin,tienda);
@@ -47,6 +47,12 @@ int main() {
 				break;
 			case 6:
 				mostrarCliente(tienda);
+				break;
+			case 7:
+				modificarCliente(admin,tienda);
+				break;
+			case 8:
+				modificarProducto(admin,tienda);
 				break;
 		}
 	} while(op!=0);

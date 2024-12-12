@@ -10,5 +10,7 @@ void agregarProductos(Administrador&,TiendaComponentes&);
 void mostrarVenta(TiendaComponentes);
 void mostrarProducto(TiendaComponentes);
 void mostrarCliente(TiendaComponentes);
+void modificarCliente(Administrador&,TiendaComponentes&);
+void modificarProducto(Administrador&,TiendaComponentes&);
 
 #endif
