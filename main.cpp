@@ -11,7 +11,31 @@ using namespace std;
 
 int main() {
 	TiendaComponentes tienda;
-	Administrador admin("Oscar","63147610","934323253");
+	Administrador admin("Wesley","63147610","934323253");
+	admin.asignarUsuario("admin");
+	admin.asignarContrasenia("1234");
+	
+	string usuario,contrasenia;
+	
+	for (int i=0;i<3;i++) {
+		system("cls");
+		cout<<"\tIniciar Sesion"<<endl;
+		cout<<"Ingrese su usuario: "; cin>>usuario;
+		cout<<"Ingrese su contrasenia: "; cin>>contrasenia;
+		
+		if(admin.verificarCredenciales(usuario,contrasenia)) {
+			cout<<"Sesion iniciada correctamente"<<endl;
+			break;
+		} else {
+			if (i==2) {
+				cout<<"Demasiados intentos"<<endl;
+				return 0;
+			}
+			cout<<"Usuario o contrasenia incorrecta Intente de nuevo"<<endl;
+			system("pause");
+		}
+	}
+	//cargar datos de archivo
 	gestionDatos gestion;
 	gestion.cargarClientes(&tienda);
 	gestion.cargarProductos(&tienda);
@@ -29,7 +53,7 @@ int main() {
 			<<"7. Modificar Cliente"<<endl
 			<<"8. Modificar Producto"<<endl
 			<<"9. Eliminar Cliente"<<endl
-			<<"10. Eliminar Producto"<<endl
+			<<"10. Ordenar clientes por orden alfabetico"<<endl
 			<<"0. Cerrar programa"<<endl
 			<<"Ingrese una opcion: "; cin>>op;
 		switch (op) {
@@ -61,7 +85,7 @@ int main() {
 				eliminarCliente(admin,tienda);
 				break;
 			case 10:
-				eliminarProd(admin,tienda);
+				mostrarClienAlf(tienda);
 				break;
 		}
 	} while(op!=0);

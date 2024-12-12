@@ -13,6 +13,6 @@ void mostrarCliente(TiendaComponentes);
 void modificarCliente(Administrador&,TiendaComponentes&);
 void modificarProducto(Administrador&,TiendaComponentes&);
 void eliminarCliente(Administrador&,TiendaComponentes&);
-void eliminarProd(Administrador&,TiendaComponentes&);
+void mostrarClienAlf(TiendaComponentes);
 
 #endif

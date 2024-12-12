@@ -33,6 +33,18 @@ void Administrador::eliminarCliente(TiendaComponentes* tienda,string _dni) {
 	tienda->eliminarCliente(_dni);
 }
 
-void Administrador::eliminarProducto(TiendaComponentes* tienda,string _nombre) {
-	tienda->eliminarProducto(_nombre);
+void Administrador::asignarUsuario(string user) {
+	usuario=user;
+}
+
+void Administrador::asignarContrasenia(string password) {
+	contrasenia=password;
+}
+
+bool Administrador::verificarCredenciales(string user,string password) {
+	if (user==usuario && password==contrasenia) {
+		return true;
+	} else {
+		return false;
+	}
 }
