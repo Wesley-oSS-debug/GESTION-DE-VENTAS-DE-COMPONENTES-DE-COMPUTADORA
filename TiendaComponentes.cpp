@@ -98,11 +98,6 @@ void TiendaComponentes::modificarProducto(string _nombre,string nuevoNombre,floa
 	listaProducto[indP]->asignarStock(_stock);
 }
 
-void TiendaComponentes::eliminarCliente(string _dni) {
-	int indC=buscarCliente(_dni);
-	listaClientes.erase(listaClientes.begin()+indC);
-}
-
 void TiendaComponentes::ordenarClienAlf() {
 	//shellSort
 	int n=listaClientes.size();

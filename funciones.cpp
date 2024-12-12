@@ -80,13 +80,6 @@ void modificarProducto(Administrador& admin,TiendaComponentes& tienda) {
 	admin.editarProducto(&tienda,producto,stock,nombre,precio);
 }
 
-void eliminarCliente(Administrador& admin,TiendaComponentes& tienda) {
-	string dni;
-	cout<<"Ingrese el dni del cliente a eliminar: "; cin>>dni;
-	cout<<"Eliminado"<<endl;
-	admin.eliminarCliente(&tienda,dni);
-}
-
 void mostrarClienAlf(TiendaComponentes tienda) {
 	tienda.ordenarClienAlf();
 	tienda.mostrarNombreCliente();

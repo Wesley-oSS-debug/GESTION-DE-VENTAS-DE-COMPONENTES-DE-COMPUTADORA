@@ -3,4 +3,5 @@
 3 ryzen-5-7600 26 800
 4 ram-32gb 50 440
 5 disco-duro 31 190
-6 disipador 100 80
+6 disipador 120 80
+7 mause 100 50

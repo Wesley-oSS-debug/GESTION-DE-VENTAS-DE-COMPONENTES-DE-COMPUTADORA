@@ -21,7 +21,6 @@ class TiendaComponentes{
 		void mostrarProductos();
 		void modificarCliente(string,string,string,string);
 		void modificarProducto(string,string,float,int);
-		void eliminarCliente(string);
 		void ordenarClienAlf();
 		int buscarCliente(string);
 		int buscarVenta(int);
