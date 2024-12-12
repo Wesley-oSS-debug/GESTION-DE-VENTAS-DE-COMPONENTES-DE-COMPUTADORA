@@ -92,3 +92,4 @@ void mostrarClienAlf(TiendaComponentes tienda) {
 	tienda.mostrarNombreCliente();
 }
 
+

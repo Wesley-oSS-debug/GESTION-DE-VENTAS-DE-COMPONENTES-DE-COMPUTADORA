@@ -11,7 +11,31 @@ using namespace std;
 
 int main() {
 	TiendaComponentes tienda;
-	Administrador admin("Oscar","63147610","934323253");
+	Administrador admin("Wesley","63147610","934323253");
+	admin.asignarUsuario("admin");
+	admin.asignarContrasenia("1234");
+	
+	string usuario,contrasenia;
+	
+	for (int i=0;i<3;i++) {
+		system("cls");
+		cout<<"\tIniciar Sesion"<<endl;
+		cout<<"Ingrese su usuario: "; cin>>usuario;
+		cout<<"Ingrese su contrasenia: "; cin>>contrasenia;
+		
+		if(admin.verificarCredenciales(usuario,contrasenia)) {
+			cout<<"Sesion iniciada correctamente"<<endl;
+			break;
+		} else {
+			if (i==2) {
+				cout<<"Demasiados intentos"<<endl;
+				return 0;
+			}
+			cout<<"Usuario o contrasenia incorrecta Intente de nuevo"<<endl;
+			system("pause");
+		}
+	}
+	//cargar datos de archivo
 	gestionDatos gestion;
 	gestion.cargarClientes(&tienda);
 	gestion.cargarProductos(&tienda);
