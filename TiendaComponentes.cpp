@@ -23,9 +23,7 @@ void TiendaComponentes::mostrarDato() {
 
 void TiendaComponentes::mostrarNombreCliente() {
 	for (int i=0;i<listaClientes.size();i++) {
-		cout<<listaClientes[i]->obtenerNombre()<<endl;
-		cout<<listaClientes[i]->obtenerID()<<endl;
-		cout<<endl;
+		listaClientes[i]->mostrarPersona();
 	}
 }
 

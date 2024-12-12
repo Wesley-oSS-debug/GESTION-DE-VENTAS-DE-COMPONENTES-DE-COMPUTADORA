@@ -7,6 +7,7 @@ Persona::Persona(string _nombre,string _dni,string _telefono) {
 }
 
 void Persona::mostrarPersona() {
+	cout<<"-------------------------------------"<<endl;
 	cout<<"Nombre: "<<nombre<<endl
 		<<"DNI: "<<dni<<endl
 		<<"telefono: "<<telefono<<endl;

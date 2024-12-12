@@ -52,9 +52,12 @@ void Compra::asignarMontoTotal(float _montoTotal) {
 
 void Compra::mostrarVenta() {
 	cout<<"ID de venta: "<<idVenta<<endl
+		<<"Nombre de producto: "<<producto->obtenerNombreP()<<endl
+		<<"ID de producto: "<<producto->obtenerID()<<endl
 		<<"Cantidad: "<<cantidad<<endl
 		<<"Monto total a pagar: "<<montoTotal<<endl
-		<<"Fecha de venta: "<<fecha<<endl;
-	cout<<endl;
-	producto->mostrarProducto();
+		<<"Fecha de venta: "<<fecha<<endl
+		<<"Nombre del cliente: "<<cliente->obtenerNombre()<<endl
+		<<"Numero de DNI: "<<cliente->obtenerDNI()<<endl
+		<<endl;
 }

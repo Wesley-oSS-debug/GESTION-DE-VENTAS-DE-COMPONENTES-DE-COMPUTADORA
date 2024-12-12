@@ -19,9 +19,7 @@ void Cliente::mostrarDatos() {
 	cout<<endl<<"------------------------------------------------"<<endl;
 	for (int i=0;i<compras.size();i++) {
 		compras[i]->mostrarVenta();
-		cout<<endl;
 	}
-	mostrarPersona();
 }
 
 void Cliente::asignarIDCliente(int _id) {
