@@ -92,4 +92,7 @@ void mostrarClienAlf(TiendaComponentes tienda) {
 	tienda.mostrarNombreCliente();
 }
 
+void mostrarMaxVent(TiendaComponentes tienda) {
+	tienda.mostrarMaxVenta();
+}
 
