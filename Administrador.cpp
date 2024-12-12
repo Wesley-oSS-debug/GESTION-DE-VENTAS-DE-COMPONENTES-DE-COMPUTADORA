@@ -29,10 +29,6 @@ void Administrador::editarProducto(TiendaComponentes* tienda,string _nombre,int 
 	tienda->modificarProducto(_nombre,nuevoNombre,_precio,_stock);
 }
 
-void Administrador::eliminarCliente(TiendaComponentes* tienda,string _dni) {
-	tienda->eliminarCliente(_dni);
-}
-
 void Administrador::asignarUsuario(string user) {
 	usuario=user;
 }

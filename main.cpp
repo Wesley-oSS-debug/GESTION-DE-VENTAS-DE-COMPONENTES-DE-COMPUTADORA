@@ -59,17 +59,15 @@ int main() {
 			<<"6. Mostrar Clientes"<<endl
 			<<"7. Modificar Cliente"<<endl
 			<<"8. Modificar Producto"<<endl
-			<<"9. Eliminar Cliente"<<endl
-			<<"10. Ordenar clientes por orden alfabetico"<<endl
+			<<"9. Ordenar clientes por orden alfabetico"<<endl
 			<<"0. Cerrar programa"<<endl
 			<<"Ingrese una opcion: "; cin>>op;
 		switch (op) {
 			case 1:
 				setConsoleColor(12); // rojo
-				agregarCliente(admin,tienda,gestion);
+				agregarCliente(admin,tienda);
 				tienda.mostrarNombreCliente();
 				setConsoleColor(7); // color por defecto(blanco/gris)
-				agregarCliente(admin,tienda);
 				break;
 			case 2:
 				agregarProductos(admin,tienda);
@@ -91,9 +89,6 @@ int main() {
 				break;
 			case 8:
 				modificarProducto(admin,tienda);
-				break;
-			case 9:
-				eliminarCliente(admin,tienda);
 				break;
 			case 10:
 				mostrarClienAlf(tienda);
