@@ -14,5 +14,6 @@ void modificarCliente(Administrador&,TiendaComponentes&);
 void modificarProducto(Administrador&,TiendaComponentes&);
 void eliminarCliente(Administrador&,TiendaComponentes&);
 void mostrarClienAlf(TiendaComponentes);
+void mostrarMaxVent(TiendaComponentes);
 
 #endif
