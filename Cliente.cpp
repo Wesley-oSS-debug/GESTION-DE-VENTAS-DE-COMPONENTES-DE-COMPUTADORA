@@ -2,7 +2,6 @@
 #include <iostream>
 
 using namespace std;
-
 Cliente::Cliente(string _nombre,string _dni,string _telefono) : Persona(_nombre,_dni,_telefono) {}
 
 int Cliente::contadorID=0; //variable estatica solo se inicializa una vez
@@ -17,12 +16,14 @@ void Cliente::asignarCompras(Compra* com) {
 }
 
 void Cliente::mostrarDatos() {
+	system("cls");
 	cout<<endl<<"------------------------------------------------"<<endl;
 	for (int i=0;i<compras.size();i++) {
 		compras[i]->mostrarVenta();
 		cout<<endl;
 	}
 	mostrarPersona();
+	system("pause");
 }
 
 void Cliente::asignarIDCliente(int _id) {
