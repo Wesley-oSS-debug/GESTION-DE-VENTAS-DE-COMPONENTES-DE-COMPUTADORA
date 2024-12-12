@@ -73,10 +73,24 @@ void modificarProducto(Administrador& admin,TiendaComponentes& tienda) {
 	string nombre,producto;
 	float precio;
 	cout<<"Ingrese el nombre del producto a modificar sus datos: "; cin>>producto;
-	cout<<"Ingrese nombre producto: "; cin>>nombre;
-	cout<<"Ingrese la cantidad a agregar: "; cin>>stock;
-	cout<<"Ingrese el precio del producto: "; cin>>precio;
+	cout<<"Ingrese el nuevo nombre del producto: "; cin>>nombre;
+	cout<<"Ingrese la nueva cantidad: "; cin>>stock;
+	cout<<"Ingrese el nuevo precio del producto: "; cin>>precio;
 	cout<<"Agregado Correctamente"<<endl;
 	admin.editarProducto(&tienda,producto,stock,nombre,precio);
+}
+
+void eliminarCliente(Administrador& admin,TiendaComponentes& tienda) {
+	string dni;
+	cout<<"Ingrese el dni del cliente a eliminar: "; cin>>dni;
+	cout<<"Eliminado"<<endl;
+	admin.eliminarCliente(&tienda,dni);
+}
+
+void eliminarProd(Administrador& admin,TiendaComponentes& tienda) {
+	string _nombre;
+	cout<<"Ingrese el nombre del producto a eliminar: "; cin>>_nombre;
+	cout<<"Eliminado"<<endl;
+	admin.eliminarProducto(&tienda,_nombre);
 }
 

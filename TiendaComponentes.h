@@ -20,6 +20,8 @@ class TiendaComponentes{
 		void mostrarProductos();
 		void modificarCliente(string,string,string,string);
 		void modificarProducto(string,string,float,int);
+		void eliminarCliente(string);
+		void eliminarProducto(string);
 		int buscarCliente(string);
 		int buscarProducto(string);
 		vector<Cliente*> obtenerClientes();

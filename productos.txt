@@ -2,5 +2,5 @@
 2 i5-12400f 15 790
 3 ryzen-5-7600 26 800
 4 ram-32gb 50 440
-5 cooler 81 120
 6 disco-duro 31 190
+7 disipador 120 80

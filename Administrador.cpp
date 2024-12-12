@@ -28,3 +28,11 @@ void Administrador::editarCliente(TiendaComponentes* tienda,string _dni,string _
 void Administrador::editarProducto(TiendaComponentes* tienda,string _nombre,int _stock,string nuevoNombre,float _precio) {
 	tienda->modificarProducto(_nombre,nuevoNombre,_precio,_stock);
 }
+
+void Administrador::eliminarCliente(TiendaComponentes* tienda,string _dni) {
+	tienda->eliminarCliente(_dni);
+}
+
+void Administrador::eliminarProducto(TiendaComponentes* tienda,string _nombre) {
+	tienda->eliminarProducto(_nombre);
+}
