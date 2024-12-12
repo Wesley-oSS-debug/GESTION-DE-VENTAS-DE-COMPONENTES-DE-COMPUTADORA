@@ -10,6 +10,7 @@
 
 using namespace std;
 
+// funcion para dar color a los caracteres
 void setConsoleColor( int color){
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(hConsole,color);
@@ -26,7 +27,7 @@ int main() {
 	
 	for (int i=0;i<3;i++) {
 		system("cls");
-		cout<<"\tIniciar Sesion"<<endl;
+		cout<<"\tINICIAR SESIÓN\n"<<endl;
 		cout<<"Ingrese su usuario: "; cin>>usuario;
 		cout<<"Ingrese su contrasenia: "; cin>>contrasenia;
 		
@@ -84,37 +85,50 @@ int main() {
 				setConsoleColor(7); // color por defecto(blanco/gris)
 				break;
 			case 2:
+				setConsoleColor(13); // purpura
 				mostrarCliente(tienda);
-				//agregarProductos(admin,tienda);
+				setConsoleColor(7); // color por defecto(blanco/gris)
 				break;
 			case 3:
+				setConsoleColor(2); // verde
 				realizarVenta(admin,tienda);
+				setConsoleColor(7); // color por defecto(blanco/gris)
 				break;
-			case 4:
+			case 4: // observacion
+				setConsoleColor(9); // azul
 				mostrarVenta(tienda);
+				setConsoleColor(7); // color por defecto(blanco/gris)
 				break;
 			case 5:
+				setConsoleColor(14); // amarillo
 				mostrarProducto(tienda);
+				setConsoleColor(7); // color por defecto(blanco/gris)
 				break;
 			case 6:
+				setConsoleColor(15); // blanco
 				modificarCliente(admin,tienda);
-				//mostrarCliente(tienda);
+				setConsoleColor(7); // color por defecto(blanco/gris)
 				break;
 			case 7:
+				setConsoleColor(1 | (8 << 4));  // texto negro , fondo gris
 				//modificarCliente(admin,tienda);
 				modificarProducto(admin,tienda);
+				setConsoleColor(7); // color por defecto(blanco/gris)
 				break;
 			case 8:
+				setConsoleColor(7 | (12 << 4)); // texto blanco, fondo rojo
 				agregarProductos(admin,tienda);
-				//modificarProducto(admin,tienda);
-				//mostrarMaxVent(tienda);
+				setConsoleColor(7); // color por defecto(blanco/gris)
 				break;
 	        case 9:
+	        	setConsoleColor(2 | (1 << 4)); // texto rojo, fondo azul
 		        mostrarMaxVent(tienda);
+		        setConsoleColor(7); // color por defecto(blanco/gris)
 		        break;
 			case 10:
+				setConsoleColor(7 | (1 << 4)); // texto blanco, fondo azul
 				mostrarClienAlf(tienda);
-				//agregarProductos(admin,tienda);
+				setConsoleColor(7); // color por defecto(blanco/gris)
 				
 				break;
 			
