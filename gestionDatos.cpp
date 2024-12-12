@@ -41,12 +41,9 @@ void gestionDatos::guardarCompras(TiendaComponentes* tienda) {
 	vector<Cliente*> cliente;
 	cliente=tienda->obtenerClientes();
 	
-	vector<Producto*> producto;
-	producto=tienda->obtenerProductos();
 	
 	vector<Compra*> ventas;
 	
-
 	for (int j=0;j<cliente.size();j++) {
 		ventas=cliente[j]->obtenerCompras();
 		for (int i=0;i<ventas.size();i++) {
@@ -59,6 +56,8 @@ void gestionDatos::guardarCompras(TiendaComponentes* tienda) {
 						<<ventas[i]->obtenerFecha()<<" "<<endl;
 		}
 	}
+	
+	archivoSalida.close();
 }
 
 void gestionDatos::cargarClientes(TiendaComponentes* tienda) {
@@ -101,12 +100,13 @@ void gestionDatos::cargarCompras(TiendaComponentes* tienda) {
 	
 	while (archivoEntrada>>idVenta>>nombreC>>dni>>nombreP>>cantidad>>montoTotal>>fecha) {
 		// Buscar Cliente y producto por nombre
-        int indCliente = tienda->buscarCliente(dni);
-        int indProducto = tienda->buscarProducto(nombreP);
+        int indCliente=tienda->buscarCliente(dni);
+        int indProducto=tienda->buscarProducto(nombreP);
         //obtener cliente y producto encontrado por medio del indice
-        Cliente* cliente = tienda->obtenerClientes()[indCliente];
-        Producto* producto = tienda->obtenerProductos()[indProducto];
-    	Compra* compra = new Compra(cliente, producto, cantidad, fecha);
+        Cliente* cliente=tienda->obtenerClientes()[indCliente];
+        Producto* producto=tienda->obtenerProductos()[indProducto];
+    	Compra* compra=new Compra(cliente, producto, cantidad, fecha);
+    	compra->aumentarID();
         compra->asignarIDVenta(idVenta); 
         compra->asignarMontoTotal(montoTotal);
         // Asigna la compra al cliente y al producto
@@ -117,7 +117,6 @@ void gestionDatos::cargarCompras(TiendaComponentes* tienda) {
 }
 
 void gestionDatos::actualizarDatos(TiendaComponentes* tienda) {
-	
 	remove("productos.txt");
 	remove("clientes.txt");
 	remove("ventas.txt");

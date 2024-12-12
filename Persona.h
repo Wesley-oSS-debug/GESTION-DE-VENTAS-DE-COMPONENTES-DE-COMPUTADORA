@@ -14,7 +14,10 @@ class Persona{
 		void mostrarPersona();
 		string obtenerNombre();
 		string obtenerDNI();
-		string obtenerTelefono();	
+		string obtenerTelefono();
+		void asignarNombre(string);
+		void asignarDNI(string);
+		void asignarTelefono(string);
 };
 
 #endif

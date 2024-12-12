@@ -18,7 +18,12 @@ class TiendaComponentes{
 		void mostrarNombreCliente();
 		void crearCompra(int,string,string,string);
 		void mostrarProductos();
+		void modificarCliente(string,string,string,string);
+		void modificarProducto(string,string,float,int);
+		void eliminarCliente(string);
+		void ordenarClienAlf();
 		int buscarCliente(string);
+		int buscarVenta(int);
 		int buscarProducto(string);
 		vector<Cliente*> obtenerClientes();
 		vector<Producto*> obtenerProductos();

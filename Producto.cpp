@@ -7,6 +7,8 @@ Producto::Producto(int _stock,string _nombre,float _precio) {
 	stock=_stock, nombre=_nombre, precio=_precio;
 }
 
+int Producto::contadorID=0;
+
 void Producto::mostrarProducto() {
 	cout<<endl;
 	cout<<"ID del producto: "<<id<<endl
@@ -21,6 +23,11 @@ float Producto::obtenerPrecio() {
 
 int Producto::obtenerID() {
 	return id;
+}
+
+void Producto::aumentarID() {
+	contadorID++;
+	id=contadorID;
 }
 
 int Producto::obtenerStock() {
@@ -41,5 +48,17 @@ string Producto::obtenerNombreP() {
 
 void Producto::asignarID(int _id) {
 	id=_id;
+}
+
+void Producto::asignarNombre(string _nombre) {
+	nombre=_nombre;
+}
+
+void Producto::asignarPrecio(float _precio) {
+	precio=_precio;
+}
+
+void Producto::asignarStock(int _stock) {
+	stock=_stock;
 }
 
