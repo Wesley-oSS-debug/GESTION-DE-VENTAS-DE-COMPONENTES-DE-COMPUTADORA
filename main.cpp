@@ -55,13 +55,13 @@ int main() {
 			setConsoleColor(11);
 		cout<<"\n\n----------MENÚ PRINCIPAL---------\n\n";
 		cout<<"1. Agregar cliente"<<endl
-			<<"2. Agregar productos"<<endl
+			<<"2. Mostrar Clientes"<<endl
 			<<"3. Realizar venta"<<endl
 			<<"4. Mostrar datos de venta"<<endl
 			<<"5. Mostrar Productos"<<endl
-			<<"6. Mostrar Clientes"<<endl
-			<<"7. Modificar Cliente"<<endl
-			<<"8. Modificar Producto"<<endl
+			<<"6. Modificar Cliente"<<endl
+			<<"7. Modificar Producto"<<endl
+			<<"8. Agregar Productos"<<endl
 			<<"9. Mostrar Maxima venta"<<endl
 			<<"10. Ordenar clientes por orden alfabetico"<<endl
 			<<"0.  GUARDAR Y SALIR"<<endl;
@@ -84,7 +84,8 @@ int main() {
 				setConsoleColor(7); // color por defecto(blanco/gris)
 				break;
 			case 2:
-				agregarProductos(admin,tienda);
+				mostrarCliente(tienda);
+				//agregarProductos(admin,tienda);
 				break;
 			case 3:
 				realizarVenta(admin,tienda);
@@ -96,19 +97,25 @@ int main() {
 				mostrarProducto(tienda);
 				break;
 			case 6:
-				mostrarCliente(tienda);
+				modificarCliente(admin,tienda);
+				//mostrarCliente(tienda);
 				break;
 			case 7:
-				modificarCliente(admin,tienda);
+				//modificarCliente(admin,tienda);
+				modificarProducto(admin,tienda);
 				break;
 			case 8:
-				modificarProducto(admin,tienda);
+				agregarProductos(admin,tienda);
+				//modificarProducto(admin,tienda);
+				//mostrarMaxVent(tienda);
 				break;
       		case 9:
        			 mostrarMaxVent(tienda);
         		break;
 			case 10:
 				mostrarClienAlf(tienda);
+				//agregarProductos(admin,tienda);
+				
 				break;
 			
 		}
