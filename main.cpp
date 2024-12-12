@@ -59,7 +59,8 @@ int main() {
 			<<"6. Mostrar Clientes"<<endl
 			<<"7. Modificar Cliente"<<endl
 			<<"8. Modificar Producto"<<endl
-			<<"9. Ordenar clientes por orden alfabetico"<<endl
+			<<"9. Mostrar Maxima venta"<<endl
+			<<"10. Ordenar clientes por orden alfabetico"<<endl
 			<<"0. Cerrar programa"<<endl
 			<<"Ingrese una opcion: "; cin>>op;
 		switch (op) {
@@ -90,9 +91,13 @@ int main() {
 			case 8:
 				modificarProducto(admin,tienda);
 				break;
+      case 9:
+        mostrarMaxVent(tienda);
+        break;
 			case 10:
 				mostrarClienAlf(tienda);
 				break;
+			
 		}
 	} while(op!=0);
 	

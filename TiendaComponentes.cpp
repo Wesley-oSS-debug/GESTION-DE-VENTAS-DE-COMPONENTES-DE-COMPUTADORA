@@ -67,6 +67,22 @@ int TiendaComponentes::buscarVenta(int _id) {
 	return -1;
 }
 
+void TiendaComponentes::mostrarMaxVenta() {
+	vector<Compra*> ventas;
+	float max=0;
+	Compra* ventaMax;
+	for (int i=0;i<listaClientes.size();i++) {
+		ventas=listaClientes[i]->obtenerCompras();
+			for (int j=0;j<ventas.size();j++) {
+				if  (max<ventas[j]->obtenerMontoTotal()) {
+					max=ventas[j]->obtenerMontoTotal();
+					ventaMax=ventas[j];
+				}
+		}
+	}
+	ventaMax->mostrarVenta();
+}
+
 void TiendaComponentes::modificarCliente(string _dni,string _nombre,string _nuevoDni,string _telefono) {
 	int indC=buscarCliente(_dni);
 	listaClientes[indC]->asignarNombre(_nombre);
