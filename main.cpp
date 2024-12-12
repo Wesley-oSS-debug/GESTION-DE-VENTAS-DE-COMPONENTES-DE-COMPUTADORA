@@ -5,9 +5,16 @@
 #include "Administrador.h"
 #include "TiendaComponentes.h"
 #include "funciones.h"
+#include <windows.h>
 using namespace std;
 
+void setConsoleColor( int color){
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(hConsole,color);
+}
+
 int main() {
+	SetConsoleOutputCP(CP_UTF8);
 	TiendaComponentes tienda;
 	Administrador admin("Oscar","63147610","934323253");
 	gestionDatos gestion;
@@ -27,8 +34,10 @@ int main() {
 			<<"Ingrese una opcion: "; cin>>op;
 		switch (op) {
 			case 1:
+				setConsoleColor(12); // rojo
 				agregarCliente(admin,tienda,gestion);
 				tienda.mostrarNombreCliente();
+				setConsoleColor(7); // color por defecto(blanco/gris)
 				break;
 			case 2:
 				agregarProductos(admin,tienda,gestion);
