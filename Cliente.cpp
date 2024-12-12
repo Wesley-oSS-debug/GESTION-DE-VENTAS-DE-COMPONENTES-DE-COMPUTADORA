@@ -16,14 +16,12 @@ void Cliente::asignarCompras(Compra* com) {
 }
 
 void Cliente::mostrarDatos() {
-	system("cls");
 	cout<<endl<<"------------------------------------------------"<<endl;
 	for (int i=0;i<compras.size();i++) {
 		compras[i]->mostrarVenta();
 		cout<<endl;
 	}
 	mostrarPersona();
-	system("pause");
 }
 
 void Cliente::asignarIDCliente(int _id) {

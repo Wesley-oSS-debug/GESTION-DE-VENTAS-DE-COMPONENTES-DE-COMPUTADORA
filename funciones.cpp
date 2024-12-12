@@ -45,6 +45,7 @@ void realizarVenta(Administrador& admin,TiendaComponentes& tienda) {
 	int cantidadCaracteres;
 	string nombre,dni,fecha;
 	tienda.mostrarProductos();
+	cout<<"\n\n------------REALIZAR VENTAS------------\n\n";
 	cout<<"Ingrese nombre producto: "; cin>>nombre;
 	cout<<"Ingrese la cantidad comprada: "; cin>>cantidad;
 	cout<<"Ingrese dni de la persona: "; cin>>dni;
@@ -72,6 +73,7 @@ void agregarProductos(Administrador& admin,TiendaComponentes& tienda) {
 	int stock;
 	string nombre;
 	float precio;
+	cout<<"\n\n-----------AGREGAR PRODUCTOS-------------\n\n";
 	cout<<"Ingrese nombre producto: "; cin>>nombre;
 	cout<<"Ingrese la cantidad a agregar: "; cin>>stock;
 	cout<<"Ingrese el precio del producto: "; cin>>precio;
@@ -82,18 +84,21 @@ void agregarProductos(Administrador& admin,TiendaComponentes& tienda) {
 }
 void mostrarVenta(TiendaComponentes tienda) {
 	system("cls");
+	cout<<"\n\n-----------LISTA DE VENTAS-----------\n\n";
 	tienda.mostrarDato();
 	system("pause");
 }
 
 void mostrarProducto(TiendaComponentes tienda) {
 	system("cls");
+	cout<<"\n\n-----------LISTA DE PRODUCTOS---------\n\n";
 	tienda.mostrarProductos();
 	system("pause");
 }
 
 void mostrarCliente(TiendaComponentes tienda) {
 	system("cls");
+	cout<<"\n\n----------LISTA DE CLIENTES------------\n\n";
 	tienda.mostrarNombreCliente();
 	system("pause");
 }
@@ -101,6 +106,7 @@ void mostrarCliente(TiendaComponentes tienda) {
 void modificarCliente(Administrador& admin,TiendaComponentes& tienda) {
 	system("cls");
 	string nombre,dni,nuevoDni,numero;
+	cout<<"\n\n---------MODIFICAR CLIENTE----------\n\n";
 	tienda.mostrarNombreCliente();
 	cout<<"Ingrese el DNI del cliente a modificar sus datos: "; cin>>dni;
 	cout<<"Ingrese el nuevo nombre: "; cin>>nombre;
@@ -116,6 +122,7 @@ void modificarProducto(Administrador& admin,TiendaComponentes& tienda) {
 	int stock;
 	string nombre,producto;
 	float precio;
+	cout<<"\n\n------------MODIFICAR PRODUCTO-----------\n\n";
 	cout<<"Ingrese el nombre del producto a modificar sus datos: "; cin>>producto;
 	cout<<"Ingrese el nuevo nombre del producto: "; cin>>nombre;
 	cout<<"Ingrese la nueva cantidad: "; cin>>stock;
@@ -127,6 +134,7 @@ void modificarProducto(Administrador& admin,TiendaComponentes& tienda) {
 
 void mostrarClienAlf(TiendaComponentes tienda) {
 	system("cls");
+	cout<<"\n\n---------LISTA DE CLIENTES ALFABÉTICAMENTE----------\n\n";
 	tienda.ordenarClienAlf();
 	tienda.mostrarNombreCliente();
 	system("pause");
@@ -134,6 +142,7 @@ void mostrarClienAlf(TiendaComponentes tienda) {
 
 void mostrarMaxVent(TiendaComponentes tienda) {
 	system("cls");
+	cout<<"\n\n----------MOSTRAR VENTA MÁXIMA-----------\n\n";
 	tienda.mostrarMaxVenta();
 	system("pause");
 }
