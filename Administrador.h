@@ -20,6 +20,8 @@ class Administrador:public Persona{
 		void gestionarCompra(TiendaComponentes*,int,string,string,string);
 		void editarCliente(TiendaComponentes*,string,string,string,string);
 		void editarProducto(TiendaComponentes*,string,int,string,float);
+		void eliminarCliente(TiendaComponentes*,string);
+		void eliminarProducto(TiendaComponentes*,string);
 		void mostrarAdministrador();	
 };
 

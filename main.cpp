@@ -6,6 +6,7 @@
 #include "TiendaComponentes.h"
 #include "funciones.h"
 #include "gestionDatos.h"
+
 using namespace std;
 
 int main() {
@@ -27,6 +28,8 @@ int main() {
 			<<"6. Mostrar Clientes"<<endl
 			<<"7. Modificar Cliente"<<endl
 			<<"8. Modificar Producto"<<endl
+			<<"9. Eliminar Cliente"<<endl
+			<<"10. Eliminar Producto"<<endl
 			<<"0. Cerrar programa"<<endl
 			<<"Ingrese una opcion: "; cin>>op;
 		switch (op) {
@@ -53,6 +56,12 @@ int main() {
 				break;
 			case 8:
 				modificarProducto(admin,tienda);
+				break;
+			case 9:
+				eliminarCliente(admin,tienda);
+				break;
+			case 10:
+				eliminarProd(admin,tienda);
 				break;
 		}
 	} while(op!=0);
