@@ -57,3 +57,26 @@ void mostrarCliente(TiendaComponentes tienda) {
 	tienda.mostrarNombreCliente();
 }
 
+void modificarCliente(Administrador& admin,TiendaComponentes& tienda) {
+	string nombre,dni,nuevoDni,numero;
+	tienda.mostrarNombreCliente();
+	cout<<"Ingrese el DNI del cliente a modificar sus datos: "; cin>>dni;
+	cout<<"Ingrese el nuevo nombre: "; cin>>nombre;
+	cout<<"Ingrese el nuevo dni: "; cin>>nuevoDni;
+	cout<<"Ingrese el nuevo telefono: "; cin>>numero;
+	cout<<endl;
+	admin.editarCliente(&tienda,dni,nombre,nuevoDni,numero);
+}
+
+void modificarProducto(Administrador& admin,TiendaComponentes& tienda) {
+	int stock;
+	string nombre,producto;
+	float precio;
+	cout<<"Ingrese el nombre del producto a modificar sus datos: "; cin>>producto;
+	cout<<"Ingrese nombre producto: "; cin>>nombre;
+	cout<<"Ingrese la cantidad a agregar: "; cin>>stock;
+	cout<<"Ingrese el precio del producto: "; cin>>precio;
+	cout<<"Agregado Correctamente"<<endl;
+	admin.editarProducto(&tienda,producto,stock,nombre,precio);
+}
+

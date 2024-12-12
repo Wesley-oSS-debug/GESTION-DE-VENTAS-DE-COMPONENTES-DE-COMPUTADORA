@@ -23,3 +23,15 @@ string Persona::obtenerNombre() {
 string Persona::obtenerTelefono() {
 	return telefono;
 }
+
+void Persona::asignarDNI(string _dni) {
+	dni=_dni;
+}
+
+void Persona::asignarNombre(string _nombre) {
+	nombre=_nombre;
+}
+
+void Persona::asignarTelefono(string _telefono) {
+	telefono=_telefono;
+}
