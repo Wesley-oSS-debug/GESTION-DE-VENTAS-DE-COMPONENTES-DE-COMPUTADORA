@@ -2,7 +2,6 @@
 #include <iostream>
 
 using namespace std;
-
 Cliente::Cliente(string _nombre,string _dni,string _telefono) : Persona(_nombre,_dni,_telefono) {}
 
 int Cliente::contadorID=0; //variable estatica solo se inicializa una vez
